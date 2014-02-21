@@ -49,3 +49,6 @@ ln -sf dotfiles/.emacs.d .
 npm install cheerio
 npm install commander
 npm install restler
+
+git config --global user.name "Thibaut Tiberghien"
+git config --global user.email thibaut@planecq.com
