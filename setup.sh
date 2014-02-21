@@ -46,9 +46,16 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+# Install extra node modules
 npm install cheerio
 npm install commander
 npm install restler
 
+# config for efficient git
 git config --global user.name "Thibaut Tiberghien"
 git config --global user.email thibaut@planecq.com
+ssh-keygen -t rsa -N "" -C "thibaut@planecq.com" -f ~/.ssh/id_rsa
+ssh-add id_rsa
+echo "You should copy the next line into a new ssh key on github (https://github.com/settings/ssh)."
+cat ~/.ssh/id_rsa.pub
+echo "Then you can run 'ssh -T git@github.com' to check that the connection is working."
