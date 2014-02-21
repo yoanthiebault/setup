@@ -47,6 +47,7 @@ ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
 # Install extra node modules
+npm install express
 npm install cheerio
 npm install commander
 npm install restler
