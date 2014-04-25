@@ -1,6 +1,6 @@
 setup.git
 =========
-Download and run this on a new EC2 instance running Ubuntu 12.04.2 LTS to
+Download and run this on a new EC2 instance running Ubuntu 14.04 LTS to
 configure both the machine and your individual development environment as
 follows:
 
