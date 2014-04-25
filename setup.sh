@@ -2,16 +2,16 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-# Install nvm: node-version manager
-# https://github.com/creationix/nvm
+# install git
 sudo apt-get install -y git
-sudo apt-get install -y curl
-curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
-# Load nvm and install latest production node
-source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
+# Install node.js via package manager (npm is included in chris lea's nodejs package)
+# https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+sudo apt-get install software-properties-common
+sudo apt-get install python-software-properties python g++ make
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install nodejs
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
@@ -52,9 +52,12 @@ npm install cheerio
 npm install commander
 npm install restler
 
+# Install sails.js MVC framework for node.js
+sudo npm -g install sails
+
 # config for efficient git
 git config --global user.name "Thibaut Tiberghien"
-git config --global user.email thibaut@planecq.com
+git config --global user.email "thibaut.tiberghien@ipal.cnrs.fr"
 ssh-keygen -t rsa -N "" -C "thibaut@planecq.com" -f ~/.ssh/id_rsa
 ssh-add id_rsa
 echo "You should copy the next line into a new ssh key on github (https://github.com/settings/ssh)."
