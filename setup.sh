@@ -57,10 +57,10 @@ ln -sf dotfiles/.emacs.d .
 . ~/.bash_profile
 
 # Install extra node modules
-npm install express
-npm install cheerio
-npm install commander
-npm install restler
+sudo npm install express
+sudo npm install cheerio
+sudo npm install commander
+sudo npm install restler
 
 # Install sails.js MVC framework for node.js
 sudo npm -g install sails
