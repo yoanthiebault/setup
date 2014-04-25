@@ -2,8 +2,12 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-# Correct locale setting
-sudo locale-gen en_US.UTF-8
+# Correct locale setting (since .bash_profile not used yet for this session)
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+sudo dpkg-reconfigure locales
 
 # Install git
 sudo apt-get install -y git
