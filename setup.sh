@@ -53,6 +53,9 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+# update bash profile
+. ~/.bash_profile
+
 # Install extra node modules
 npm install express
 npm install cheerio
