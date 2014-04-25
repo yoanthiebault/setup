@@ -3,7 +3,7 @@
 # for headless setup. 
 
 # Correct locale setting
-sudo locale-gen UTF-8
+sudo locale-gen en_US.UTF-8
 
 # Install git
 sudo apt-get install -y git
