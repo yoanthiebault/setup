@@ -5,7 +5,7 @@ configure both the machine and your individual development environment as
 follows:
 
 ```sh
-wget https://github.com/tibotiber/ec2-setup/raw/master/setup.sh | sh
+wget -qO- https://github.com/tibotiber/ec2-setup/raw/master/setup.sh | sh
 ```
 
 See also http://github.com/tibotiber/ec2-dotfiles and
