@@ -2,7 +2,10 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-# install git
+# Correct locale setting
+sudo locale-gen UTF-8
+
+# Install git
 sudo apt-get install -y git
 
 # Install node.js via package manager (npm is included in chris lea's nodejs package)
