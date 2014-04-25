@@ -10,11 +10,11 @@ sudo apt-get install -y git
 
 # Install node.js via package manager (npm is included in chris lea's nodejs package)
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
-sudo apt-get install software-properties-common
-sudo apt-get install python-software-properties python g++ make
-sudo add-apt-repository ppa:chris-lea/node.js
-sudo apt-get update
-sudo apt-get install nodejs
+sudo apt-get install -y software-properties-common
+sudo apt-get install -y python-software-properties python g++ make
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get -qq update
+sudo apt-get install -y nodejs
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
