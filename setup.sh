@@ -68,6 +68,7 @@ sudo npm -g install sails
 
 # Install MQTT tools
 sudo apt-get install -y mosquitto python-mosquitto mosquitto-clients
+sudo rm /etc/init/mosquitto.conf # because I don't want mosquitto as a startup service
 sudo npm -g install mosca # mosca installed globally if not included in ubismart
 
 # config for efficient git
