@@ -57,6 +57,7 @@ ln -sf dotfiles/.emacs.d .
 . ~/.bash_profile
 
 # Install extra node modules
+# These are just for testing, can be removed in production
 sudo npm install express
 sudo npm install cheerio
 sudo npm install commander
@@ -64,6 +65,10 @@ sudo npm install restler
 
 # Install sails.js MVC framework for node.js
 sudo npm -g install sails
+
+# Install MQTT tools
+sudo apt-get install -y mosquitto python-mosquitto mosquitto-clients
+sudo npm -g install mosca # mosca installed globally if not included in ubismart
 
 # config for efficient git
 git config --global user.name "Thibaut Tiberghien"
