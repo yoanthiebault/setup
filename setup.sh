@@ -34,6 +34,9 @@ sudo add-apt-repository -y ppa:cassou/emacs
 sudo apt-get -qq update
 sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
 
+# Install tmuxinator (help for setting tmux sessions)
+sudo gem install tmuxinator
+
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
@@ -48,6 +51,7 @@ if [ -d .emacs.d/ ]; then
 fi
 git clone https://github.com/tibotiber/ec2-dotfiles.git dotfiles
 ln -sb dotfiles/.screenrc .
+ln -sb dotfiles/.tmux.conf .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
