@@ -56,13 +56,6 @@ ln -sf dotfiles/.emacs.d .
 # update bash profile
 . ~/.bash_profile
 
-# Install extra node modules
-# These are just for testing, can be removed in production
-sudo npm install express
-sudo npm install cheerio
-sudo npm install commander
-sudo npm install restler
-
 # Install sails.js MVC framework for node.js
 sudo npm -g install sails
 
