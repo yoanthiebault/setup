@@ -52,6 +52,7 @@ fi
 git clone https://github.com/tibotiber/ec2-dotfiles.git dotfiles
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.tmux.conf .
+ln -sb dotfiles/.tmuxinator .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
@@ -59,6 +60,9 @@ ln -sf dotfiles/.emacs.d .
 
 # update bash profile
 . ~/.bash_profile
+
+# source completion file for tmuxinator
+source .tmuxinator/tmuxinator.bash
 
 # Install sails.js MVC framework for node.js
 sudo npm -g install sails
