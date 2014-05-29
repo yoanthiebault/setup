@@ -50,7 +50,6 @@ if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 git clone https://github.com/tibotiber/ec2-dotfiles.git dotfiles
-ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.tmux.conf .
 ln -sb dotfiles/.tmuxinator .
 ln -sb dotfiles/.bash_profile .
