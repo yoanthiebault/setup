@@ -71,6 +71,12 @@ sudo apt-get install -y mosquitto python-mosquitto mosquitto-clients
 sudo rm /etc/init/mosquitto.conf # because I don't want mosquitto as a startup service
 sudo npm -g install mosca # mosca installed globally if not included in ubismart
 
+# Install 32bit libs to run yap (eye) - this bit is Ubuntu 14.04 specific!
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386
+
+
 # config for efficient git
 git config --global user.name "Thibaut Tiberghien"
 git config --global user.email "thibaut.tiberghien@ipal.cnrs.fr"
