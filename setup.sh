@@ -20,6 +20,13 @@ sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get -qq update
 sudo apt-get install -y nodejs
 
+# Install zeromq-node binaries so that npm install zmq works
+# https://github.com/JustinTulloss/zeromq.node/wiki/Installation
+sudo add-apt-repository -y ppa:chris-lea/zeromq
+sudo add-apt-repository -y ppa:chris-lea/libpgm
+sudo apt-get update
+sudo apt-get install -y libzmq3-dev
+
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 sudo npm install -g jshint
