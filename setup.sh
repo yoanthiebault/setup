@@ -12,6 +12,9 @@ sudo dpkg-reconfigure locales
 # Install git
 sudo apt-get install -y git
 
+# Install unzip
+sudo apt-get install -y unzip
+
 # Install node.js via package manager (npm is included in chris lea's nodejs package)
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
 sudo apt-get install -y software-properties-common
