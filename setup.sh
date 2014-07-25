@@ -20,6 +20,9 @@ sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get -qq update
 sudo apt-get install -y nodejs
 
+# Install node version manager to switch versions easily
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.12.1/install.sh | bash
+
 # Install zeromq-node binaries so that npm install zmq works
 # https://github.com/JustinTulloss/zeromq.node/wiki/Installation
 sudo add-apt-repository -y ppa:chris-lea/zeromq
