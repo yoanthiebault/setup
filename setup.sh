@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Simple setup.sh for configuring Ubuntu 14.04 LTS EC2 instance
 # for headless setup. 
 
@@ -14,6 +14,10 @@ sudo apt-get install -y git
 
 # Install unzip
 sudo apt-get install -y unzip
+
+# Install zsh and make it the default shell
+sudo apt-get install -y zsh
+sudo chsh -s /bin/zsh
 
 # Install node.js via package manager (npm is included in chris lea's nodejs package)
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
