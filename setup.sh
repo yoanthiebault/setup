@@ -17,7 +17,7 @@ sudo apt-get install -y unzip
 
 # Install zsh and make it the default shell
 sudo apt-get install -y zsh
-sudo chsh -s /bin/zsh
+sudo chsh -s $(which zsh) ubuntu
 
 # Install node.js via package manager (npm is included in chris lea's nodejs package)
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
