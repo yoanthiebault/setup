@@ -37,9 +37,9 @@ sudo add-apt-repository -y ppa:chris-lea/libpgm
 sudo apt-get update
 sudo apt-get install -y libzmq3-dev
 
-# Install jshint to allow checking of JS code within emacs
-# http://jshint.com/
+# Install jshint and js-beautify
 sudo npm install -g jshint
+sudo npm install -g js-beautify
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
