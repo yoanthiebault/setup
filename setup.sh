@@ -2,6 +2,8 @@
 # Simple setup.sh for configuring Ubuntu 14.04 LTS EC2 instance
 # for headless setup. 
 
+cd ~/
+
 # Correct locale setting (since .bash_profile not used yet for this session)
 export LANGUAGE=en_US:en
 export LANG=en_US.UTF-8
@@ -18,6 +20,15 @@ sudo apt-get install -y unzip
 # Install zsh and make it the default shell
 sudo apt-get install -y zsh
 sudo chsh -s $(which zsh) ubuntu
+
+# Install fasd for j jump in zsh
+wget -qO- https://codeload.github.com/clvv/fasd/legacy.zip/1.0.1 > fasd.zip
+unzip fasd.zip
+cd clvv-fasd-4822024
+sudo make install
+cd ~/
+rm -rf clvv-fasd-4822024
+rm -f fasd.zip
 
 # Install node.js via package manager (npm is included in chris lea's nodejs package)
 # https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
