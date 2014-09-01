@@ -9,10 +9,13 @@ follows:
 wget -qO- https://github.com/tibotiber/setup/raw/master/update_locales.sh | sh
 exit
 # please ssh login as root again
+wget -qO- https://github.com/tibotiber/setup/raw/master/create_user.sh | sh
+su <your_username>
+cd
 wget -qO- https://github.com/tibotiber/setup/raw/master/setup.sh | sh
 zsh
 wget -qO- https://github.com/tibotiber/setup/raw/master/configure_zsh.sh | zsh
-# you can now exit and reconnect with your user account and the same key
+# you can now exit and reconnect as <your_username> with the same key
 ```
 Run the following for ubismart only
 ```sh
