@@ -11,7 +11,10 @@ sudo apt-get install -y unzip
 
 # install common software packages
 sudo apt-get install -y software-properties-common
-sudo apt-get install -y python-software-properties python g++ make
+sudo apt-get install -y python-software-properties
+sudo apt-get install -y python
+sudo apt-get install -y g++
+sudo apt-get install -y make
 
 # install zsh and make it the default shell
 sudo apt-get install -y zsh
