@@ -22,7 +22,9 @@ Run the following for ubismart only
 wget -qO- https://github.com/tibotiber/setup/raw/master/ubi_setup.sh | sh
 ```
 
-Note: You will probably need to exit and reconnect to apply the new shell profile.
+###Notes: 
+* You will probably need to exit and reconnect to apply the new shell profile.
+* It may also be necessary to install flycheck from emacs package manager.
 
 See also http://github.com/tibotiber/dotfiles and
 [Startup Engineering Video Lectures 4a/4b](https://class.coursera.org/startup-001/lecture/index)
