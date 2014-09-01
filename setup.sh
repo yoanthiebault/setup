@@ -1,18 +1,28 @@
 #!/bin/sh
-# Simple setup.sh for configuring Ubuntu 14.04 LTS EC2 instance
-# for headless setup. 
+# Simple setup.sh for configuring Ubuntu 14.04 LTS Digital Ocean droplet for headless setup.
 
-cd ~/
+USER="tibo"
 
-# Correct locale setting (since .bash_profile not used yet for this session)
-export LANGUAGE=en_US:en
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
-sudo dpkg-reconfigure locales
+# Create user, add to sudo group without password and change user
+adduser --disabled-password --gecos "" $USER
+sudo adduser $USER sudo
+touch /etc/sudoers.tmp
+sudo echo -e "# passwordless sudo functionality\n$USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.tmp
+visudo -c -f /etc/sudoers.tmp
+if [ "$?" -eq "0" ]; then
+    cp /etc/sudoers.tmp /etc/sudoers.d/nopwd
+fi
+rm /etc/sudoers.tmp
+sudo service sudo restart
+su $USER
+cd
 
 # Install git
 sudo apt-get install -y git
+
+#---------------#
+#<<CHECK BELOW>>#
+#---------------#
 
 # Install unzip
 sudo apt-get install -y unzip
