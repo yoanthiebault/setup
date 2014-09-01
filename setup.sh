@@ -3,9 +3,6 @@
 
 USER="tibo"
 
-# create user
-wget -qO- https://github.com/tibotiber/setup/raw/master/create_user.sh | sh
-
 # install git
 sudo apt-get install -y git
 
