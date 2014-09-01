@@ -19,3 +19,4 @@ sudo service sudo restart
 # authorize passwordless ssh login
 mkdir /home/$USER/.ssh/
 sudo cp /root/.ssh/authorized_keys /home/$USER/.ssh/
+chown $USER:$USER /home/$USER/.ssh/authorized_keys
