@@ -17,6 +17,10 @@ sudo service sudo restart
 su $USER
 cd
 
+# Authorize passwordless ssh login
+mkdir .ssh/
+sudo cp /root/.ssh/authorized_keys .ssh/
+
 # Install git
 sudo apt-get install -y git
 
