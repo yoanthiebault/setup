@@ -16,10 +16,6 @@ fi
 rm /etc/sudoers.tmp
 sudo service sudo restart
 
-# change user
-su $USER
-cd
-
 # authorize passwordless ssh login
-mkdir .ssh/
-sudo cp /root/.ssh/authorized_keys .ssh/
+mkdir /home/$USER/.ssh/
+sudo cp /root/.ssh/authorized_keys /home/$USER/.ssh/
