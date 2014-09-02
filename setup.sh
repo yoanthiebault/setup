@@ -65,6 +65,9 @@ if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 git clone https://github.com/tibotiber/dotfiles.git
+cd dotfiles/
+git submodule update --init --recursive
+cd
 ln -sb dotfiles/.tmux.conf .
 ln -sb dotfiles/.tmuxinator .
 ln -sf dotfiles/.emacs.d .
