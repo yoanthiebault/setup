@@ -1,6 +1,6 @@
 #!/bin/sh
 
-USER="tibo"
+USER=$1
 
 # create user
 adduser --disabled-password --gecos "" $USER
