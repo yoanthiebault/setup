@@ -6,8 +6,9 @@ USER=$1
 # install git
 sudo apt-get install -y git
 
-# install unzip
+# install misc. handy packages
 sudo apt-get install -y unzip
+sudo apt-get install -y tree
 
 # install common software packages
 sudo apt-get install -y software-properties-common
