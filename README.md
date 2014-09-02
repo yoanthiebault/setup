@@ -9,10 +9,10 @@ follows:
 wget -qO- https://github.com/tibotiber/setup/raw/master/update_locales.sh | sh
 exit
 # please ssh login as root again
-wget -qO- https://github.com/tibotiber/setup/raw/master/create_user.sh | sh
+wget -qO- https://github.com/tibotiber/setup/raw/master/create_user.sh | sh -s <your_username>
 su <your_username>
 cd
-wget -qO- https://github.com/tibotiber/setup/raw/master/setup.sh | sh
+wget -qO- https://github.com/tibotiber/setup/raw/master/setup.sh | sh -s <your_username>
 zsh
 wget -qO- https://github.com/tibotiber/setup/raw/master/configure_zsh.sh | zsh
 # you can now exit and reconnect as <your_username> with the same key
