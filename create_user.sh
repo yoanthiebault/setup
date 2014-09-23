@@ -1,19 +1,25 @@
 #!/bin/sh
 
 USER=$1
+NOPWD="/etc/sudoers.d/nopwd"
+TMP="/etc/sudoers.tmp"
 
 # create user
 adduser --disabled-password --gecos "" $USER
 
 # give sudo rights without password
 sudo adduser $USER sudo
-touch /etc/sudoers.tmp
-sudo echo -e "# passwordless sudo functionality\n$USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.tmp
-visudo -c -f /etc/sudoers.tmp
-if [ "$?" -eq "0" ]; then
-    cp /etc/sudoers.tmp /etc/sudoers.d/nopwd
+if [ -f "$NOPWD" ]; then
+    cp $NOPWD $TMP
+else
+    touch $TMP
 fi
-rm /etc/sudoers.tmp
+sudo echo -e "# passwordless sudo functionality\n$USER ALL=(ALL) NOPASSWD:ALL" >> $TMP
+visudo -c -f $TMP
+if [ "$?" -eq "0" ]; then
+    cp $TMP $NOPWD
+fi
+rm $TMP
 sudo service sudo restart
 
 # authorize passwordless ssh login
