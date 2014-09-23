@@ -13,8 +13,9 @@ if [ -f "$NOPWD" ]; then
     cp $NOPWD $TMP
 else
     touch $TMP
+    sudo echo -e "# passwordless sudo functionality" > $TMP
 fi
-sudo echo -e "# passwordless sudo functionality\n$USER ALL=(ALL) NOPASSWD:ALL" >> $TMP
+sudo echo -e "$USER ALL=(ALL) NOPASSWD:ALL" >> $TMP
 visudo -c -f $TMP
 if [ "$?" -eq "0" ]; then
     cp $TMP $NOPWD
